@@ -88,13 +88,18 @@ for (const pixels of pixel) {
     event.target.style.backgroundColor = storeColor;
   });
 }
+
 //---------------------------------------------------------------------------------
 
+// eslint-disable-next-line no-unused-vars
 const clearBoardButton = document.querySelector('#clear-board');
-clearBoardButton.addEventListener('click', () => {
-  const pixels = document.querySelectorAll('.pixel');
-  pixels.forEach((pixel) => {
-    // eslint-disable-next-line no-param-reassign
-    pixel.style.backgroundColor = 'white';
+// eslint-disable-next-line no-unused-vars
+function clear() {
+  // eslint-disable-next-line arrow-spacing
+  pixel.forEach((pixel) => {
+    const colors = pixel; // eslint-disable-next-line no-param-reassign
+    colors.style.backgroundColor = 'white';
+    // eslint-disable-next-line no-undef
   });
-});
+}
+clearBoardButton.addEventListener('click', clear);

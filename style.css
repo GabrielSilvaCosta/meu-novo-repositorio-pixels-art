@@ -43,7 +43,7 @@ button {
   display: block;
   margin: 0 auto;
   color: black;
-  background-color: cornflowerblue;
+  background-color: white;
   border-radius: 10px;
 }
 
@@ -65,10 +65,12 @@ button {
   padding: 2px;
 }
 
-#clear-board {
+#clear-board .pixel {
+  background-color: white;
   position: relative;
   top: 10px;
   left: 10px
+  
 
 
 }
