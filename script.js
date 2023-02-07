@@ -59,8 +59,7 @@ black.classList.add('selected');
 const selectColor = () => {
   const coloresPalette = document.querySelectorAll('.color');
   // eslint-disable-next-line no-undef
-  for (let index = 0; index < coloresPalette.length; index += 1) {
-    // eslint-disable-next-line no-undef, no-loop-func, func-names
+  for (let index = 0; index < coloresPalette.length; index += 1) { // eslint-disable-next-line no-undef, no-loop-func, func-names
     coloresPalette[index].addEventListener('click', function () {
       // eslint-disable-next-line no-undef
       for (let i = 0; i < coloresPalette.length; i += 1) {
