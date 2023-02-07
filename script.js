@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 const button = document.getElementById('button-random-color');
 // eslint-disable-next-line no-use-before-define
 button.addEventListener('click', generateRandom);
@@ -22,7 +23,7 @@ function getRandomColor() {
 // eslint-disable-next-line no-unused-vars
 function generateColorPalette() {
   const colorPalette = [];
-  for (let i = 0; i < 5; i += 1) {
+  for (let i = 0; i < colorPalette.length; i += 1) {
     colorPalette.push(getRandomColor());
   }
   localStorage.setItem('colorPalette', JSON.stringify(colorPalette));
@@ -33,7 +34,7 @@ function generateColorPalette() {
 function getColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
-  for (let i = 0; i < 6; i += 1) {
+  for (let i = 0; i < letters; i += 1) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
@@ -71,16 +72,29 @@ const selectColor = () => {
   }
 };
 selectColor();
+
 //-------------------------------------------------------------------------------------
-const pixes = document.querySelectorAll('.pixel');
+
+const pixel = document.querySelectorAll('.pixel');
+
 // eslint-disable-next-line no-restricted-syntax
-for (const pixel of pixes) {
+for (const pixels of pixel) {
   // eslint-disable-next-line no-return-assign, no-loop-func
-  pixel.addEventListener('click', (event) => {
+  pixels.addEventListener('click', (event) => {
     // eslint-disable-next-line no-param-reassign
     const selecao = document.getElementsByClassName('selected')[0];
     const storeColor = selecao.style.backgroundColor;
-    // eslint-disable-next-line no-param-reassign
+    // eslint-disable-next-line no-param-reassign, no-undef
     event.target.style.backgroundColor = storeColor;
   });
 }
+//---------------------------------------------------------------------------------
+
+const clearBoardButton = document.querySelector('#clear-board');
+clearBoardButton.addEventListener('click', () => {
+  const pixels = document.querySelectorAll('.pixel');
+  pixels.forEach((pixel) => {
+    // eslint-disable-next-line no-param-reassign
+    pixel.style.backgroundColor = 'white';
+  });
+});
