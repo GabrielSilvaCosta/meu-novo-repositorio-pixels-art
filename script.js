@@ -71,3 +71,16 @@ const selectColor = () => {
   }
 };
 selectColor();
+//-------------------------------------------------------------------------------------
+const pixes = document.querySelectorAll('.pixel');
+// eslint-disable-next-line no-restricted-syntax
+for (const pixel of pixes) {
+  // eslint-disable-next-line no-return-assign, no-loop-func
+  pixel.addEventListener('click', (event) => {
+    // eslint-disable-next-line no-param-reassign
+    const selecao = document.getElementsByClassName('selected')[0];
+    const storeColor = selecao.style.backgroundColor;
+    // eslint-disable-next-line no-param-reassign
+    event.target.style.backgroundColor = storeColor;
+  });
+}
