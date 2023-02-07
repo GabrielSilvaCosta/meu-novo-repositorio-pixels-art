@@ -59,6 +59,8 @@ button {
 .pixel {
   width: 40px;
   height: 40px;
+  margin: 0px;
   background-color: white;
   border: 1px solid black;
+  padding: 2px;
 }
