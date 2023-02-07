@@ -1,59 +1,64 @@
+h1 {
+  text-align: center;
+}
 
-
+body {
+  background-color: antiquewhite;
+}
 
 #color-palette {
-    display: flex;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
 }
 
 .color {
-
-border: 1px solid black;
-width: 50px;
-height: 50px;
-margin-right: 10px;
-
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  padding: 20px;
 }
 .black {
-    background-color: black;
-
+  background-color: black;
 }
 
 .red {
-    background-color: red ;
-
+  background-color: red;
 }
 
 .blue {
-    background-color: blue;
-
+  background-color: blue;
 }
 
 .green {
-    background-color: green;
-
+  background-color: green;
 }
 
-  button{
-    width: 100px;
-    height: 40px;
-    margin: 20px;
-  }
+button {
+  width: 100px;
+  height: 40px;
+  margin: 20px;
+  display: block;
+  margin: 0 auto;
+  color: black;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+}
 
-  #pixel-board {
-    display: flex;
-    flex-wrap: wrap;
-    width: 125px;
-    height: 125px;
-  }
+#pixel-board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 125px;
+  margin: 0 auto;
+  padding: 35px;
+}
 
-  .pixel {
-    width: 25px;
-    height: 25px;
-   
-    background-color: white;
-    border: 1px solid black;
-
-  }
-  
+.pixel {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
+}
