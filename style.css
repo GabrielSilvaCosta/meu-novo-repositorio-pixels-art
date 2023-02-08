@@ -39,11 +39,11 @@ body {
 button {
   width: 100px;
   height: 40px;
-  margin: 20px;
+  margin: 25px;
   display: block;
   margin: 0 auto;
   color: black;
-  background-color: white;
+  background-color: aqua;
   border-radius: 10px;
 }
 
