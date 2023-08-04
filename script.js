@@ -28,22 +28,24 @@ function getRandomColor() {
 //---------------------------------------------------------------------------------------
 
 // questao 5
+const paletas = document.querySelectorAll('#color-palette .color');
+
 const localStorage = () => {
   const colorPalette = {
-    0: black[0].style.backgroundColor,
-    1: red[1].style.backgroundColor,
-    2: blue[2].style.backgroundColor,
-    3: green[3].style.backgroundColor,
+    1: paletas[1].style.backgroundColor,
+    2: paletas[2].style.backgroundColor,
+    3: paletas[3].style.backgroundColor,
+    4: paletas[4].style.backgroundColor,
   };
-  localStorage.setItem('color-palette', JSON.stringify(colorPalette));
+  localStorage.setItem('colorPalette', JSON.stringify(colorPalette));
 };
 
 const restore = () => {
-  const peleta = document.getElementById('#color-palette');
-  const restaure = JSON.parse(localStorage.getItem('color-palette'));
+  const paletas = document.getElementsByClassName('color');
+  const restaure = JSON.parse(localStorage.getItem('colorPalette'));
   if (restaure) {
-    for (let index = 1; index < peleta.length; index += 1) {
-      peleta[index].style.backgroundColor = restaure[index];
+    for (let index = 1; index < paletas.length; index += 1) {
+      paletas[index].style.backgroundColor = restaure[index];
     }
   }
 };
@@ -101,3 +103,4 @@ clearBoardButton.addEventListener('click', () => {
   });
 });
 selectColor();
+//------------------------------------------------------------------------------------

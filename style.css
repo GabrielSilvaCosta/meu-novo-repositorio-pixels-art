@@ -3,8 +3,16 @@ h1 {
 }
 
 body {
-  background-color: antiquewhite;
+  background-image: url("https://mcdn.wallpapersafari.com/medium/51/6/qmYEGR.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+
 }
+
+
 
 #color-palette {
   display: flex;
@@ -15,18 +23,27 @@ body {
 
 .color {
   border: 1px solid black;
+  border-radius: 45px;
+  transition: all 0.5s;
+  cursor: pointer;
+  transform: scale(1.0);
   width: 50px;
   height: 50px;
   margin-right: 10px;
   padding: 20px;
+  -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+ 
 }
 .black {
   background-color: black;
+ 
 }
 
 .red {
   background-color: rgb(255, 0, 0);
 }
+
 
 .blue {
   background-color: blue;
@@ -39,7 +56,7 @@ body {
 button {
   width: 100px;
   height: 40px;
-  margin: 25px;
+  margin: 50px;
   display: block;
   margin: 0 auto;
   color: black;
@@ -65,11 +82,13 @@ button {
   padding: 2px;
 }
 
-#clear-board .pixel {
-  background-color: white;
+#clear-board {
+  background-color: aqua;
+  color: black;
   position: relative;
+  padding: 10px;
   top: 10px;
-  left: 10px
+  left: 2px
   
 
 
