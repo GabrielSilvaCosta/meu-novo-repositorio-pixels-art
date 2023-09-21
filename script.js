@@ -89,6 +89,7 @@ for (const index of px) {
     const createColor = element.style.backgroundColor;
     console.log(element.style.backgroundColor);
     event.target.style.backgroundColor = createColor;
+    //
   });
 }
 
