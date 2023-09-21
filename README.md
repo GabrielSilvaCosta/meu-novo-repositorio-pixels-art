@@ -1,5 +1,4 @@
-Pixel Art
-Descrição
+
 Este é um projeto de Pixel Art que utiliza HTML, CSS e JavaScript. 
 Ele permite aos usuários criar obras de arte pixeladas selecionando cores da paleta e pintando pixels na tela.
 
